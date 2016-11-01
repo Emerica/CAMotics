@@ -190,7 +190,12 @@ void ToolPathView::update() {
       currentDistance += moveDistance;
 
       // Store GL data
-      Color color = move.getColor(move.getSpeed());
+      if (DIR_OFF) {
+        Color color = Color(1,1,1,1);
+      }else{
+        Color color = move.getColor(move.getSpeed());
+      }
+
 
       for (unsigned i = 0; i < 3; i++) {
         colors.push_back(color[i]);

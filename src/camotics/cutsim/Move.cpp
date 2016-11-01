@@ -43,6 +43,8 @@ Move::Move(MoveType type, const Axes &start, const Axes &end, real startTime,
 
 
 Color Move::getColor(int speed) const {
+  LOG_WARNING("Cutting speed " << speed);
+
   switch (type) {
   case MoveType::MOVE_RAPID:   return Color::RED;
   case MoveType::MOVE_CUTTING: return Color(0, 1, 0, speed/12000);

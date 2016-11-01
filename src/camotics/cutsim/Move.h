@@ -68,7 +68,7 @@ namespace CAMotics {
     real getStartTime() const {return startTime;}
     real getEndTime() const {return startTime + time;}
 
-    Color getColor() const;
+    Color getColor(int speed) const;
 
     Vector3R getPtAtTime(real time) const;
 

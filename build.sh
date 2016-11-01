@@ -13,7 +13,7 @@ git clone https://github.com/CauldronDevelopmentLLC/cbang.git &&
 scons -C cbang -j$(grep -c ^processor /proc/cpuinfo) &&
 export CBANG_HOME=$PWD/cbang &&
 
-git clone https://github.com/CauldronDevelopmentLLC/CAMotics.git &&
+git clone https://github.com/Emerica/CAMotics.git &&
 cd CAMotics &&
 scons -j$(grep -c ^processor /proc/cpuinfo) &&
 

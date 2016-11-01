@@ -45,7 +45,7 @@ Move::Move(MoveType type, const Axes &start, const Axes &end, real startTime,
 Color Move::getColor(int speed) const {
   switch (type) {
   case MoveType::MOVE_RAPID:   return Color::RED;
-  case MoveType::MOVE_CUTTING: return Color(speed/12000, speed/12000, speed/12000);
+  case MoveType::MOVE_CUTTING: return Color(0, 1, 0, speed/12000);
   case MoveType::MOVE_PROBE:   return Color::BLUE;
   case MoveType::MOVE_DRILL:   return Color::YELLOW;
   }
